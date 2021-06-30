@@ -93,6 +93,16 @@ Getting started with coding, modeling, and literature reviews
 - Conduct a Literature Review using the Nation Library of Medicine's
   [MeSH](https://www.ncbi.nlm.nih.gov/mesh) terms and
   [PubMed](https://www.ncbi.nlm.nih.gov/mesh)
+  - Find 8-10 articles that address how gender minorities can be found in 
+    (health care) data and write a paragraph or more summarizing the articles
+    keeping in mind the issues of gender identity & representation from the 
+    readings [Week 1](#week-1)
+  - Try to use git to create a 
+    [pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests)
+    to add your `.bib` (bibTex) files of the articles you found and a `.md` 
+    (Markdown) file of your summary to the [Lit-Review](Lit-Review) folder. If 
+    this is new/challenging for you, try to figure it out on your own but don't
+    spend too much time Checo can easily help! 
 
 **MeSH Terms**
 | Gender and Sex Concepts	|	Data Concepts		 |
