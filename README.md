@@ -5,7 +5,7 @@ Graduate Student Mentor: Checo Gonzales, [checo@stanford.edu](mailto:checo@stanf
 
 ## Table of contents
 - [Week 1](#week-1)
-- [Week 2]([#week-2)
+- [Week 2](#week-2)
 
 ## Project description
 
