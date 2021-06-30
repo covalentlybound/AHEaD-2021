@@ -1,7 +1,7 @@
 # AHEaD-2021
-*Algorithmic Fairness in Population Health*
-Faculty Mentor: Sherri Rose, [sherrirose@stanford.edu](mailto:sherrirose@stanford.edu)
-Graduate Student Mentor: Checo Gonzales, [checo@stanford.edu](mailto:checo@stanford.edu)
+**Algorithmic Fairness in Population Health**
+*Faculty Mentor*: Sherri Rose, [sherrirose@stanford.edu](mailto:sherrirose@stanford.edu)
+*Graduate Student Mentor*: Checo Gonzales, [checo@stanford.edu](mailto:checo@stanford.edu)
 
 ## Table of contents
 - [Week 1](#week-1)
@@ -33,21 +33,21 @@ equity for gender minorities by working on one or more of the following:
   Stanford's electronic health records (EHR) database 
 - Develop machine learning algorithms that identify gender minorities using EHR
 
-*Readings*
+**Readings**
 - Chen IY, Pierson E, Rose S, Joshi S, Ferryman K, Ghassemi M. Ethical Machine
   Learning in Healthcare. Annual Review of Biomedical Data Science. 2020;4.
-**This article is lengthy and has technical jargon. We don’t expect you to
+*This article is lengthy and has technical jargon. We don’t expect you to
 understand everything, but are using this paper to help give an overview of
 fairness and ethics considerations in health care such that we can define the
 scope of a project that will interest you. Focus on the big picture and bring
-your questions to Tuesday’s meeting! :)**
+your questions to Tuesday’s meeting! :)*
 
 
 ## Week 1
 
 Understanding data and health issues of gender diverse people
 
-*Readings* 
+**Readings** 
 - Conard, L. E. Supporting and Caring for Transgender and Gender Nonconforming
   Youth in the Urology Practice. Journal of Pediatric Urology 13, no. 3 (June
 1, 2017): 300–304. https://doi.org/10.1016/j.jpurol.2017.02.019.
@@ -70,21 +70,21 @@ https://doi.org/10.1016/j.eurpsy.2019.09.004.
   privately insured gender minority children and adults. LGBT Health.
 2019;6(6):289-96. https://doi.org/10.1089/lgbt.2018.0238. 
 
-*Tasks*
+**Tasks**
 - Complete trainings in Canvas
 
 ## Week 2
 Getting started with coding, modeling, and literature reviews
 
-*Readings*
-- **Introduction to Statistical Learning**. Available free: 
+**Readings**
+- *Introduction to Statistical Learning*. Available free: 
   https://statlearning.com
   - 2.1-2.2 (Background)
   - 3.1-3.2 (Linear regression)
   - 4.1-4.3 (Classification/logistic regression)
   - 5.1 (Cross-Validation)
 
-*Tasks*
+**Tasks**
 - Install the [R programming Language](https://cran.r-project.org) and 
   optionally [R Studio](https://www.rstudio.org/)
 - Work through this exercise in [Machine Learning](Machine-Learning)
@@ -93,7 +93,7 @@ Getting started with coding, modeling, and literature reviews
   [MeSH](https://www.ncbi.nlm.nih.gov/mesh) terms and
   [PubMed](https://www.ncbi.nlm.nih.gov/mesh)
 
-|  			*MeSH Terms*	 			||
+|  |			**MeSH Terms**				||
 | Gender and Sex Concepts	|	Data Concepts		 |
 | ----------------------------- | ------------------------------ |
 | Transgender Persons		| Data, Factual			 |
