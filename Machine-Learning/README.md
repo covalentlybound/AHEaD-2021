@@ -40,7 +40,7 @@ Next train a good old-fashioned logistic regression
 
 ```r
 # Run a multivariable logistic regression
-logistic1 <- glm(Y~W1+W2, data=df2, family="binomial")
+logistic1 <- glm(Y ~ W1 + W2, data=df2, family="binomial")
 
 # Predicted probabilities from the regression
 pylogistic1 <- predict(logistic1, type="response")
@@ -74,9 +74,9 @@ penalized linear regression
 library(glmnet)	# install with line install.packages(“glmnet”) if needed
 		# then run library command
 Y <- df2$Y
-W <- matrix(c(df2$W1,df2$W2), nrow=n, ncol=2)
+W <- matrix(c(df2$W1, df2$W2), nrow=n, ncol=2)
 
-lasso1 <- glmnet(W,Y, family="binomial") # default is alpha=1, lasso
+lasso1 <- glmnet(W, Y, family="binomial") # default is alpha=1, lasso
 ```
 
 Use cross-validation to select 
@@ -84,7 +84,7 @@ Use cross-validation to select
 
 ```r
 # Cross-validation is used to select the lambda value
-cv.lasso1     <- cv.glmnet(W,Y)
+cv.lasso1     <- cv.glmnet(W, Y)
 select_lambda <- cv.lasso1$lambda.min
 
 # Predicted probabilities from the lasso with optimal lambda
