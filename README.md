@@ -93,7 +93,7 @@ Getting started with coding, modeling, and literature reviews
   [MeSH](https://www.ncbi.nlm.nih.gov/mesh) terms and
   [PubMed](https://www.ncbi.nlm.nih.gov/mesh)
 
-|  |			**MeSH Terms**				||
+|  			**MeSH Terms**				||
 | Gender and Sex Concepts	|	Data Concepts		 |
 | ----------------------------- | ------------------------------ |
 | Transgender Persons		| Data, Factual			 |
