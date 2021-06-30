@@ -88,7 +88,8 @@ Getting started with coding, modeling, and literature reviews
 - Install the [R programming Language](https://cran.r-project.org) and 
   optionally [R Studio](https://www.rstudio.org/)
 - Work through this exercise in [Machine Learning](Machine-Learning)
-- Work on STARR onboarding with Checo
+- Fill out this [when2meet](https://www.when2meet.com/?12221510-ghnwH) to find
+  a time to work on STARR onboarding with Checo
 - Conduct a Literature Review using the Nation Library of Medicine's
   [MeSH](https://www.ncbi.nlm.nih.gov/mesh) terms and
   [PubMed](https://www.ncbi.nlm.nih.gov/mesh)
