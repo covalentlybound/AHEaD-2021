@@ -1,8 +1,7 @@
 # AHEaD-2021
 **Algorithmic Fairness in Population Health**
 
-*Faculty Mentor*: Sherri Rose, [sherrirose@stanford.edu](mailto:sherrirose@stanford.edu)
-
+*Faculty Mentor*: Sherri Rose, [sherrirose@stanford.edu](mailto:sherrirose@stanford.edu) </br>
 *Graduate Student Mentor*: Checo Gonzales, [checo@stanford.edu](mailto:checo@stanford.edu)
 
 ## Table of contents
