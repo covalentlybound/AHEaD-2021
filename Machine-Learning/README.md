@@ -21,8 +21,9 @@ First generate and summarize some data with a specific functional relationship
 
 # Set random seed so that data reproduces the same each time it is run
 set.seed(27)
+
 # Sample Size
-n<-1000
+n <- 1000
 
 # Generate data
 df2 <- data.frame(W1=runif(n, min=0.5, max=1),
@@ -42,18 +43,18 @@ Next train a good old-fashioned logistic regression
 logistic1 <- glm(Y~W1+W2, data=df2, family="binomial")
 
 # Predicted probabilities from the regression
-pylogistic1 < -predict(logistic1, type="response")
+pylogistic1 <- predict(logistic1, type="response")
 ```
 
 Train and visualize a classification tree
 
 ```r
 # Run a classification tree
-library(rpart) #if you do not have this library install it with 
-  #the line `install.packages(“rpart”)` and then run
-  #library command
+library(rpart)	# if you do not have this library install it with 
+		# the line `install.packages(“rpart”)` and then run
+		# library command
 
-rpart1 <- rpart(Y~W1+W2, data=df2)
+rpart1 <- rpart(Y ~ W1 + W2, data=df2)
  
 # Plot the tree
 plot(rpart1)
@@ -70,12 +71,12 @@ penalized linear regression
 ```r
 # Run a lasso penalized regression
 
-library(glmnet) #install with line install.packages(“glmnet”) if needed
-            	#then run library command
+library(glmnet)	# install with line install.packages(“glmnet”) if needed
+		# then run library command
 Y <- df2$Y
 W <- matrix(c(df2$W1,df2$W2), nrow=n, ncol=2)
 
-lasso1 <- glmnet(W,Y, family="binomial") #default is alpha=1, lasso
+lasso1 <- glmnet(W,Y, family="binomial") # default is alpha=1, lasso
 ```
 
 Use cross-validation to select 
@@ -83,7 +84,7 @@ Use cross-validation to select
 
 ```r
 # Cross-validation is used to select the lambda value
-cv.lasso1 <- cv.glmnet(W,Y)
+cv.lasso1     <- cv.glmnet(W,Y)
 select_lambda <- cv.lasso1$lambda.min
 
 # Predicted probabilities from the lasso with optimal lambda
