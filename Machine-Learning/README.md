@@ -28,8 +28,8 @@ n <- 1000
 # Generate data
 df2 <- data.frame(W1=runif(n, min=0.5, max=1),
 		  W2=runif(n, min=0, max=1))
-df2 <- transform(df2, #add Y
-		 Y=rbinom(n, 1, 1/(1 + exp(-(-3*W1 - 2*W2 + 2)))))
+df2 <-  transform(df2, #add Y
+		  Y=rbinom(n, 1, 1 / (1 + exp(-(-3*W1 - 2*W2 + 2))) ) )
  
 # Summary of the variables in dataset ‘df2'
 summary(df2)
