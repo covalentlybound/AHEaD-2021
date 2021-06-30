@@ -4,8 +4,8 @@ Faculty Mentor: Sherri Rose, [sherrirose@stanford.edu](mailto:sherrirose@stanfor
 Graduate Student Mentor: Checo Gonzales, [checo@stanford.edu](mailto:checo@stanford.edu)
 
 ## Table of contents
-- [Week 1][#week-1]
-- [Week 2][#week-2]
+- [Week 1](#week-1)
+- [Week 2]([#week-2)
 
 ## Project description
 
@@ -87,18 +87,18 @@ Getting started with coding, modeling, and literature reviews
 *Tasks*
 - Install the [R programming Language](https://cran.r-project.org) and 
   optionally [R Studio](https://www.rstudio.org/)
-- Work through this exercise in Machine Learning
+- Work through this exercise in [Machine Learning](Machine-Learning)
 - Work on STARR onboarding with Checo
 - Conduct a Literature Review using the Nation Library of Medicine's
   [MeSH](https://www.ncbi.nlm.nih.gov/mesh) terms and
   [PubMed](https://www.ncbi.nlm.nih.gov/mesh)
 
-|  			*MeSH Terms*	 			 |
- Gender and Sex Concepts	|	Data Concepts		 |
- ------------------------------ | ------------------------------ |
-Transgender Persons		| Data, Factual			 |
-Gender Identity			| Data Science			 |
-Sex Factors			| Classification		 |
-Gender Dysphoria		| Electronic Health Records	 |
-Disorders of Sex Development	| 				 |
+|  			*MeSH Terms*	 			||
+| Gender and Sex Concepts	|	Data Concepts		 |
+| ----------------------------- | ------------------------------ |
+| Transgender Persons		| Data, Factual			 |
+| Gender Identity		| Data Science			 |
+| Sex Factors			| Classification		 |
+| Gender Dysphoria		| Electronic Health Records	 |
+| Disorders of Sex Development	| 				 |
 
