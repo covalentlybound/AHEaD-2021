@@ -93,7 +93,7 @@ Getting started with coding, modeling, and literature reviews
   [MeSH](https://www.ncbi.nlm.nih.gov/mesh) terms and
   [PubMed](https://www.ncbi.nlm.nih.gov/mesh)
 
-|  			**MeSH Terms**				||
+**MeSH Terms**
 | Gender and Sex Concepts	|	Data Concepts		 |
 | ----------------------------- | ------------------------------ |
 | Transgender Persons		| Data, Factual			 |
@@ -102,3 +102,5 @@ Getting started with coding, modeling, and literature reviews
 | Gender Dysphoria		| Electronic Health Records	 |
 | Disorders of Sex Development	| 				 |
 
+The above are some suggested MeSH terms to get you started. You might also want
+to explore others and experiment to see the full power of MeSH.
