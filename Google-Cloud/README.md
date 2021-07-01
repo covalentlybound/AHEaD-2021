@@ -39,18 +39,25 @@ working before we get started with STARR.
 The basic steps for using `bigrquery` are to:
 
 0. Import the library
-0. Specify the Google Cloud Project ID </br>
-   (If you're not already using Google Cloud you'll have use the HealthRex 
-   project)
+0. Specify the Google Cloud Project ID
 0. Declare your SQL query as a string in R
 0. Call `query_exec` to execute your query and store it as a data frame
 
 ```r
 ## Step 0
 library("bigrquery")
+```
+Easy enough! 
 
+If you don't already have a Google Cloud account, go to: 
+https://console.cloud.google.com/ and sign with any GSuite account and start a
+free trial. For the home page you can find your Project ID under Project info.
+
+![project id][/imgs/project-id-sc.png]
+
+```
 ## Step 1
-projectId <- "mining-clinical-decisions"
+projectId <- "my-project"
 ```
 
 For the next two steps were gonna use the [Iowa Liquor
@@ -65,7 +72,7 @@ work with it without SQL.
 Say we want to look yearly trends in the revenue generated from alcohol sales
 in each county. To do that, we `SELECT` the county, year, and `SUM` the sales
 revenue variables and `GROUP BY` county and year. We can also tell SQL to
-`ORDER BY` the new total revenue varible from high to low: `DESC` (decending
+`ORDER BY` the new total revenue variable from high to low: `DESC` (descending
 order).
 ```r
 ## Step 2
@@ -84,8 +91,7 @@ df <- query_exec(query, project=projectId, useLegacySql=FALSE)
 
 Now try making a line plot showing the trend of `total_revenue` over the years
 with a line for each `county`. I'd suggest using `ggplot`. Make a pull request
-to put your code in this folder and display your plot on this page (or you can
-use the Google Doc).
+to push your code in this directory and edit this file to add your plot on this page (or you can use the Google Doc).
 
 `Delete this and put your figuers here`
 
