@@ -55,9 +55,9 @@ free trial. For the home page you can find your Project ID under Project info.
 
 ![project id](imgs/project-id-sc.png)
 
-```
+```r
 ## Step 1
-projectId <- "my-project"
+projectId <- "*my-project*"
 ```
 
 For the next two steps were gonna use the [Iowa Liquor
