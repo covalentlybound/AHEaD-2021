@@ -59,7 +59,7 @@ work with it without SQL.
 
 Say we want to look yearly trends in the revenue generated from alcohol sales
 in each county. We can easily do that by using SQL to create a table. To do
-that, we `SELECT` the county, year, and `SUM` the sales revenue variable and
+that, we `SELECT` the county, year, and `SUM` the sales revenue variables and
 `GROUP BY` county and year. We can also tell SQL to `ORDER BY` the new total
 revenue varible from high to low: `DESC` (decending order).
 ```r
@@ -82,8 +82,8 @@ trend of `total_revenue` over the years with a line for each `county`. I'd
 suggest using `ggplot`. Make a pull request to put your code in this folder and
 display your plot on this page (or you can use the Google Doc).
 
-`Put your figuers here`
+<p style="text-align: center">`Delete this and put your figuers here`</p>
 
-Sweet, hopefully that worked. Now we can get started using STARR!
+Sweet, hopefully that was painless. Now we can get started using STARR!
 
 ## Accessing STARR
