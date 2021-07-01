@@ -82,7 +82,7 @@ trend of `total_revenue` over the years with a line for each `county`. I'd
 suggest using `ggplot`. Make a pull request to put your code in this folder and
 display your plot on this page (or you can use the Google Doc).
 
-<p style="text-align: center">`Delete this and put your figuers here`</p>
+`Delete this and put your figuers here`
 
 Sweet, hopefully that was painless. Now we can get started using STARR!
 
