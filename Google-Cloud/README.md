@@ -21,8 +21,8 @@ inform health policy.
 
 ## Contents
 
-- [Perquisites][#perquisites]
-- [STARR][#starr] 
+- [Perquisites](#perquisites)
+- [STARR](#starr)
 
 ## Perquisites
 To get started we need to install the BigQuery API in R. The features we need
