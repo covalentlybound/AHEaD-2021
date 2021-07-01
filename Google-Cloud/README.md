@@ -106,7 +106,7 @@ query <- "SELECT
 		total_revenue DESC"
 
 ## Step 3
-tb <- bq_perform_query(query, projectId)
+tb <- bq_project_query(query, projectId)
 tb <- bq_table_download(tb)
 tb
 ```
