@@ -37,17 +37,17 @@ Next we need to create an authentication key for Google Cloud
 gcloud auth application-default login
 ```
 After you run the above line you should see something like `Credentials saved 
-to file: [path/to/auth-key.json]` and we need to tell R where to look that key
-when it needs to use it.
-```bash
-export GOOGLE_APPLICATION_CREDENTIALS="path/to/auth-key.json"
-```
+to file: [path/to/auth-key.json]` we'll need to use this later R can connect to
+BigQuery.
 
 Alright now were ready to start using the R BigQuery API in R. The features we
 need are still in development so we'll install the API using the `devtools`
-package (this might take a while if don't already have `devtools` installed).
+package (this might take a while if don't already have `devtools` installed). We
+will also need to use the `tidyverse` packages, which is the sliced bread of 
+data science.
 
 ```r
+install.packages("tidyverse")
 install.packages("devtools")
 devtools::install_github("rstats-db/bigrquery")
 ```
@@ -58,12 +58,13 @@ working before we get started with STARR.
 The basic steps for using `bigrquery` are to:
 
 0. Import the library
-0. Specify the Google Cloud Project ID
+0. Declare Google Cloud Project ID and authentication key
 0. Declare your SQL query as a string in R
 0. Call `query_exec` to execute your query and store it as a data frame
 
 ```r
 ## Step 0
+library("tidyverse")
 library("bigrquery")
 ```
 Easy enough! 
@@ -75,6 +76,8 @@ For the home page you can find your Project ID under Project info.
 ```r
 ## Step 1
 projectId <- "whatever-your-project-id-is"
+authKey   <- "path/to/auth-key.json"
+bq_auth(authPath)
 ```
 
 For the next two steps were gonna use the [Iowa Liquor
@@ -96,14 +99,14 @@ order).
 query <- "SELECT 
 		county, YEAR(date) AS year, SUM(sale_dollars) AS total_revenue
 	  FROM
-		`fh-bigquery:liquor.iowa`
+		`bigquery-public-data.iowa_liquor_sales.sales`
 	  GROUP BY
 		county, year
 	  ORDER BY
 		total_revenue DESC"
 
 ## Step 3
-df <- query_exec(query, project=projectId, useLegacySql=FALSE)
+bq_job <- bq_perform_query(query, projectId)
 ```
 
 Now try making a line plot showing the trend of `total_revenue` over the years
