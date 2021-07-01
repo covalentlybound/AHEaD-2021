@@ -11,12 +11,12 @@ We will be using a mix of [SQL](https://en.wikipedia.org/wiki/SQL) and R to
 query STARR for deidentified EHR (and no PHI) to build a cohort of patients who
 are likely to identify as trans* or non-binary. Then we can start summarizing
 the trans* patient population seen at Stanford Health Systems *for the first
-time!* We can also explore some ML clustering algorithms and potentially expand
-our cohort, do some [propensity score
+time (that I know of)!* We can also explore some ML clustering algorithms and
+potentially expand our cohort, do some [propensity score
 matching](https://en.wikipedia.org/wiki/Propensity_score_matching), and explore
 issues of health equity for this community. These queries and cohort will be
 essential for developing more inclusive data models for Sex and Gender as well
-as algorithms that can label EHR with it to enable robust research that will 
+as algorithms that can label EHR with it to enable robust research that will
 inform health policy.
 
 ## Contents
