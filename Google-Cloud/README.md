@@ -97,7 +97,7 @@ order).
 ```r
 ## Step 2
 query <- "SELECT 
-		county, YEAR(date) AS year, SUM(sale_dollars) AS total_revenue
+		county, EXTRACT(YEAR FROM date) AS year, SUM(sale_dollars) AS total_revenue
 	  FROM
 		`bigquery-public-data.iowa_liquor_sales.sales`
 	  GROUP BY
@@ -106,7 +106,9 @@ query <- "SELECT
 		total_revenue DESC"
 
 ## Step 3
-bq_job <- bq_perform_query(query, projectId)
+tb <- bq_perform_query(query, projectId)
+tb <- bq_table_download(tb)
+tb
 ```
 
 Now try making a line plot showing the trend of `total_revenue` over the years
