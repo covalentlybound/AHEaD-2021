@@ -1,4 +1,4 @@
-# Working with STARR
+# Working with Google Cloud
 
 The [STAnford Research Repository (STARR)](https://med.stanford.edu/starr-tools.html)
 is the School of Medicine's project that supports all sorts of clinical 
@@ -16,8 +16,13 @@ our cohort, do some [propensity score
 matching](https://en.wikipedia.org/wiki/Propensity_score_matching), and explore
 issues of health equity for this community. These queries and cohort will be
 essential for developing more inclusive data models for Sex and Gender as well
-as algorithms that can label EHR with it to enable robust reseach that will 
+as algorithms that can label EHR with it to enable robust research that will 
 inform health policy.
+
+## Contents
+
+- [Perquisites][#perquisites]
+- [STARR][#starr] 
 
 ## Perquisites
 To get started we need to install the BigQuery API in R. The features we need
@@ -28,7 +33,7 @@ install.packages("devtools")
 devtools::install_github("rstats-db/bigrquery")
 ```
 
-No lets do a quick check with a public dataset to make sure everything is
+Now lets do a quick check with a public dataset to make sure everything is
 working before we get started with STARR.
 
 The basic steps for using `bigrquery` are to:
@@ -58,10 +63,10 @@ patient encounters, diagnostic tests, procedures, etc. and it's impossible to
 work with it without SQL.
 
 Say we want to look yearly trends in the revenue generated from alcohol sales
-in each county. We can easily do that by using SQL to create a table. To do
-that, we `SELECT` the county, year, and `SUM` the sales revenue variables and
-`GROUP BY` county and year. We can also tell SQL to `ORDER BY` the new total
-revenue varible from high to low: `DESC` (decending order).
+in each county. To do that, we `SELECT` the county, year, and `SUM` the sales
+revenue variables and `GROUP BY` county and year. We can also tell SQL to
+`ORDER BY` the new total revenue varible from high to low: `DESC` (decending
+order).
 ```r
 ## Step 2
 query <- "SELECT 
@@ -77,13 +82,13 @@ query <- "SELECT
 df <- query_exec(query, project=projectId, useLegacySql=FALSE)
 ```
 
-Hopefully you didn't get any errors. Now try making a line plot showing the 
-trend of `total_revenue` over the years with a line for each `county`. I'd
-suggest using `ggplot`. Make a pull request to put your code in this folder and
-display your plot on this page (or you can use the Google Doc).
+Now try making a line plot showing the trend of `total_revenue` over the years
+with a line for each `county`. I'd suggest using `ggplot`. Make a pull request
+to put your code in this folder and display your plot on this page (or you can
+use the Google Doc).
 
 `Delete this and put your figuers here`
 
 Sweet, hopefully that was painless. Now we can get started using STARR!
 
-## Accessing STARR
+## STARR
