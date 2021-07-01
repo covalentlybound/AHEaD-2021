@@ -7,16 +7,17 @@ best way for us is to use the R [BigQuery](https://cloud.google.com/bigquery/)
 API. Our collaborator [Jonathon Chen](http://healthrexlab.com/) was kind enough
 to add you to his IRB and give us access to Google Cloud Project.
 
-We will be using a mix [SQL](https://en.wikipedia.org/wiki/SQL) and R to query
-STARR for deidentified EHR (and no PHI) to build a cohort of patients who are
-likely to identify as trans* or non-binary. Then we can start summarizing the
-trans* patient population seen at Stanford Health Systems *for the 
-first time!* We can also explore some ML clustering algorithms and potentially
-expand our cohort, do some 
-[propensity score matching](https://en.wikipedia.org/wiki/Propensity_score_matching),
-and explore issues of health equity for this community. These queries and
-cohort will be essential for developing more inclusive data models for Sex and 
-Gender as well as algorithms that can label EHR with it.
+We will be using a mix of [SQL](https://en.wikipedia.org/wiki/SQL) and R to
+query STARR for deidentified EHR (and no PHI) to build a cohort of patients who
+are likely to identify as trans* or non-binary. Then we can start summarizing
+the trans* patient population seen at Stanford Health Systems *for the first
+time!* We can also explore some ML clustering algorithms and potentially expand
+our cohort, do some [propensity score
+matching](https://en.wikipedia.org/wiki/Propensity_score_matching), and explore
+issues of health equity for this community. These queries and cohort will be
+essential for developing more inclusive data models for Sex and Gender as well
+as algorithms that can label EHR with it to enable robust reseach that will 
+inform health policy.
 
 ## Perquisites
 To get started we need to install the BigQuery API in R. The features we need
@@ -27,15 +28,16 @@ install.packages("devtools")
 devtools::install_github("rstats-db/bigrquery")
 ```
 
-Lets do a quick check with a public dataset to make sure everything is working 
-before we get started with STARR.
+No lets do a quick check with a public dataset to make sure everything is
+working before we get started with STARR.
 
 The basic steps for using `bigrquery` are to:
 
 0. Import the library
-0. Specify the Google Cloud Project ID
-   You can find this
-0. Declare your query string in SQL syntax
+0. Specify the Google Cloud Project ID </br>
+   (If you're not already using Google Cloud you'll have use the HealthRex 
+   project)
+0. Declare your SQL query as a string in R
 0. Call `query_exec` to execute your query and store it as a data frame
 
 ```r
@@ -49,17 +51,17 @@ projectId <- "mining-clinical-decisions"
 For the next two steps were gonna use the [Iowa Liquor
 Sales](https://data.iowa.gov/Sales-Distribution/Iowa-Liquor-Sales/m3tr-qhgy)
 data set. It's just one table with about 3 million rows, which is pretty easy
-to work with just R, so BigQuery is a bit overkill for this task.  STARR, on
-the other hand, is a rather complicated [relational
+to work with just with R, so BigQuery is a bit overkill for this task.  STARR,
+on the other hand, is a rather complicated [relational
 database](https://en.wikipedia.org/wiki/Relational_database) with decades of
-patient encounters, tests, procedures, etc. and it's impossible to work with it
-without SQL. Anyways: back to the Iowa data.
+patient encounters, diagnostic tests, procedures, etc. and it's impossible to
+work with it without SQL.
 
-Say we want to look yearly trends in the revenue generated from alcohol sales in
-each county. We can easily do that by using SQL to create a table that "selects"
-the year and sales revenue variable and then "sums" it "grouped by" county. We
-can also tell SQL how to "order" the table we want to work with.
-
+Say we want to look yearly trends in the revenue generated from alcohol sales
+in each county. We can easily do that by using SQL to create a table. To do
+that, we `SELECT` the county, year, and `SUM` the sales revenue variable and
+`GROUP BY` county and year. We can also tell SQL to `ORDER BY` the new total
+revenue varible from high to low: `DESC` (decending order).
 ```r
 ## Step 2
 query <- "SELECT 
@@ -67,7 +69,7 @@ query <- "SELECT
 	  FROM
 		`fh-bigquery:liquor.iowa`
 	  GROUP BY
-		county, date
+		county, year
 	  ORDER BY
 		total_revenue DESC"
 
