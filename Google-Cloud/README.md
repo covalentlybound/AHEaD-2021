@@ -53,7 +53,7 @@ If you don't already have a Google Cloud account, go to:
 https://console.cloud.google.com/ and sign with any GSuite account and start a
 free trial. For the home page you can find your Project ID under Project info.
 
-![project id](/imgs/project-id-sc.png)
+![project id](imgs/project-id-sc.png)
 
 ```
 ## Step 1
