@@ -25,8 +25,27 @@ inform health policy.
 - [STARR](#starr)
 
 ## Perquisites
-To get started we need to install the BigQuery API in R. The features we need
-are still in development so we'll install the API using the `devtools` package.
+If you don't already have a Google Cloud account, go to:
+https://console.cloud.google.com/ and sign with any GSuite account and start a
+free trial. Then follow the instructions 
+[here](https://cloud.google.com/sdk/docs/install). You'll need Python, which 
+shouldn't be a problem since it's nearly ubiquitous. 
+
+Next we need to create an authentication key for Google Cloud 
+
+```bash
+gcloud auth application-default login
+```
+After you run the above line you should see something like `Credentials saved 
+to file: [path/to/auth-key.json]` and we need to tell R where to look that key
+when it needs to use it.
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS="path/to/auth-key.json"
+```
+
+Alright now were ready to start using the R BigQuery API in R. The features we
+need are still in development so we'll install the API using the `devtools`
+package (this might take a few minutes).
 
 ```r
 install.packages("devtools")
@@ -49,29 +68,27 @@ library("bigrquery")
 ```
 Easy enough! 
 
-If you don't already have a Google Cloud account, go to: 
-https://console.cloud.google.com/ and sign with any GSuite account and start a
-free trial. For the home page you can find your Project ID under Project info.
+For the home page you can find your Project ID under Project info.
 
 ![project id](imgs/project-id-sc.png)
 
 ```r
 ## Step 1
-projectId <- "*my-project*"
+projectId <- "whatever-your-project-id-is"
 ```
 
 For the next two steps were gonna use the [Iowa Liquor
 Sales](https://data.iowa.gov/Sales-Distribution/Iowa-Liquor-Sales/m3tr-qhgy)
 data set. It's just one table with about 3 million rows, which is pretty easy
-to work with just with R, so BigQuery is a bit overkill for this task.  STARR,
+to work with just with R, so BigQuery is a bit overkill for this task. STARR,
 on the other hand, is a rather complicated [relational
 database](https://en.wikipedia.org/wiki/Relational_database) with decades of
 patient encounters, diagnostic tests, procedures, etc. and it's impossible to
 work with it without SQL.
 
-Say we want to look yearly trends in the revenue generated from alcohol sales
-in each county. To do that, we `SELECT` the county, year, and `SUM` the sales
-revenue variables and `GROUP BY` county and year. We can also tell SQL to
+Now say we want to look yearly trends in the revenue generated from alcohol
+sales in each county. To do that, we `SELECT` the county, year, and `SUM` the
+sales revenue variables and `GROUP BY` county and year. We can also tell SQL to
 `ORDER BY` the new total revenue variable from high to low: `DESC` (descending
 order).
 ```r
@@ -98,3 +115,4 @@ to push your code in this directory and edit this file to add your plot on this 
 Sweet, hopefully that was painless. Now we can get started using STARR!
 
 ## STARR
+Coming soon!
