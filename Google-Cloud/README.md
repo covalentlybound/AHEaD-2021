@@ -45,7 +45,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="path/to/auth-key.json"
 
 Alright now were ready to start using the R BigQuery API in R. The features we
 need are still in development so we'll install the API using the `devtools`
-package (this might take a few minutes).
+package (this might take a while if don't already have `devtools` installed).
 
 ```r
 install.packages("devtools")
