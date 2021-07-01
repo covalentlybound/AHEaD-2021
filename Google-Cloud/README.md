@@ -86,7 +86,7 @@ database](https://en.wikipedia.org/wiki/Relational_database) with decades of
 patient encounters, diagnostic tests, procedures, etc. and it's impossible to
 work with it without SQL.
 
-Now say we want to look yearly trends in the revenue generated from alcohol
+Now say we want to look at yearly trends in the revenue generated from alcohol
 sales in each county. To do that, we `SELECT` the county, year, and `SUM` the
 sales revenue variables and `GROUP BY` county and year. We can also tell SQL to
 `ORDER BY` the new total revenue variable from high to low: `DESC` (descending
