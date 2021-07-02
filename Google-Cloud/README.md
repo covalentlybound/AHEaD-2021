@@ -115,10 +115,12 @@ tb <- bq_table_download(tb)
 tb
 ```
 
-We have our table! Now try making a line plot showing the trend of
-`total_revenue` over the years with a line for each `county`. I'd suggest using
-`ggplot`. Make a pull request to push your code in this directory and edit this
-file to add your plot on this page (or you can use the Google Doc).
+We have our table! It might be a little messy still but it'll be easier to
+clean up using `tidyverse` tools than to do with our original SQL call. Try
+making a line plot showing the trend of `total_revenue` over the years with a
+line for each `county`. I'd suggest using `ggplot`. Make a pull request to push
+your code in this directory and edit this file to add your plot on this page
+(or you can use the Google Doc).
 
 `Delete this and put your figuers here`
 
