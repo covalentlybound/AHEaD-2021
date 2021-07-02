@@ -29,7 +29,9 @@ If you don't already have a Google Cloud account, go to:
 https://console.cloud.google.com/ and sign with any GSuite account and start a
 free trial. Then follow the instructions 
 [here](https://cloud.google.com/sdk/docs/install). You'll need Python, which 
-shouldn't be a problem since it's nearly ubiquitous. 
+shouldn't be a problem since it's nearly ubiquitous. Then click follow [this
+link](https://console.cloud.google.com/apis/library/bigquery.googleapis.com?_ga=2.48078567.1138561114.1625088035-509917660.1611616658) 
+and **enable** the BigQuery API.
 
 Next we need to create an authentication key for Google Cloud 
 
