@@ -33,7 +33,8 @@ shouldn't be a problem since it's nearly ubiquitous. Then click [this
 link](https://console.cloud.google.com/apis/library/bigquery.googleapis.com?_ga=2.48078567.1138561114.1625088035-509917660.1611616658) 
 and **enable** the BigQuery API.
 
-Next we need to create an authentication key for Google Cloud 
+Next we need to create an authentication key for Google Cloud. Call this next 
+line of code from your terminal/command line.
 
 ```bash
 gcloud auth application-default login
@@ -46,7 +47,7 @@ Alright now were ready to start using the R BigQuery API in R. The features we
 need are still in development so we'll install the API using the `devtools`
 package (this might take a while if don't already have `devtools` installed). We
 will also need to use the `tidyverse` packages, which is the sliced bread of 
-data science.
+data science IMHO.
 
 ```r
 install.packages("tidyverse")
@@ -62,7 +63,7 @@ The basic steps for using `bigrquery` are to:
 0. Import the library
 0. Declare Google Cloud Project ID and authentication key
 0. Declare your SQL query as a string in R
-0. Call `query_exec` to execute your query and store it as a data frame
+0. Call execute your query and store it as a table
 
 ```r
 ## Step 0
@@ -71,7 +72,8 @@ library("bigrquery")
 ```
 Easy enough! 
 
-For the home page you can find your Project ID under Project info.
+Next we need our Project IDs, which we can find on the home page of 
+http://console.cloud.google.com Project info.
 
 ![project id](imgs/project-id-sc.png)
 
@@ -113,13 +115,14 @@ tb <- bq_table_download(tb)
 tb
 ```
 
-Now try making a line plot showing the trend of `total_revenue` over the years
-with a line for each `county`. I'd suggest using `ggplot`. Make a pull request
-to push your code in this directory and edit this file to add your plot on this page (or you can use the Google Doc).
+We have our table! Now try making a line plot showing the trend of
+`total_revenue` over the years with a line for each `county`. I'd suggest using
+`ggplot`. Make a pull request to push your code in this directory and edit this
+file to add your plot on this page (or you can use the Google Doc).
 
 `Delete this and put your figuers here`
 
 Sweet, hopefully that was painless. Now we can get started using STARR!
 
 ## STARR
-Coming soon!
+*(Coming soon!)*
